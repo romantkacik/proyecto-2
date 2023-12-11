@@ -8,14 +8,16 @@
   border: none;
   outline: none;
   font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
 }
 
 :root {
   /*---COLORS---*/
 
   --rtc-color-1: #fff;
-  --rtc-color-1: #000000;
-  --rtc-color-1: #ff6000;
+  --rtc-color-2: #000000;
+  --rtc-color-3: #ff6000;
+  --rtc-color-4: #454545;
 
   /*---SPACING---*/
 
@@ -25,6 +27,12 @@
   --rtc-margin-l: 30px;
   --rtc-margin-xl: 40px;
 
+  --rtc-padding-xs: 5px;
+  --rtc-padding-s: 10px;
+  --rtc-padding-m: 20px;
+  --rtc-padding-l: 30px;
+  --rtc-padding-xl: 40px;
+
   --rtc-gap-xs: 5px;
   --rtc-gap-s: 10px;
   --rtc-gap-m: 20px;
@@ -33,5 +41,76 @@
 
   /*---BORDER-RADIUS---*/
 
+  --rtc-border--: 1px solid #d9d9d9;
+  --rtc-color-text--: var(--rtc-color-4);
+}
+
+.navBar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100px;
+  background-color: var(--rtc-color-1);
+  border: var(--rtc-border--);
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.logo {
+  width: 120px;
+  padding-left: var(--rtc-padding-m);
+}
+
+.serch {
+  display: flex;
+  margin-left: var(--rtc-margin-m);
+  padding-left: var(--rtc-padding-m);
+  padding-right: var(--rtc-padding-m);
+  align-items: center;
+  align-content: center;
+  background-color: var(--rtc-color-1);
+  border: var(--rtc-border--);
   border-radius: 8px;
+  height: 40%;
+}
+.serch > input {
+  display: flex;
+  width: 200px;
+
+  color: #acacac;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: center;
+  justify-content: center;
+}
+.serch > img {
+  width: 30px;
+  cursor: pointer;
+  padding-left: var(--rtc-padding-s);
+  background-color: var(--rtc-color-1);
+}
+
+.divIndex {
+  background-color: var(--rtc-color-1);
+  display: flex;
+  padding-left: 30%;
+  height: 50px;
+  align-items: center;
+}
+
+.divIndex > div {
+  display: flex;
+  align-items: center;
+  gap: var(--rtc-gap-s);
+  padding-left: var(--rtc-padding-m);
+  cursor: pointer;
+}
+
+.divIndex > div > img {
+  width: 20px;
+}
+.divIndex > div > span {
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--rtc-color-text--);
 }
