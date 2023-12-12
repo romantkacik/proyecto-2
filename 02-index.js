@@ -5,8 +5,8 @@ const PRODUCTS = [
     price: 2354 + '€',
     stars: 5,
     reviews: 13,
-    seller: 'Mackfan',
-    image: './assets/assets-proyectp-2/imagenes/APPLE/pc1',
+    seller: 'Vendido por Mackfan',
+    image: './assets/assets-proyectp-2/imagenes/APPLE/pc1.webp',
   },
   {
     name: 'Apple Macbook Air 2023 Apple M2/8GB/256GB SSD/GPU Deca Core/15.3 Gris Espacial',
@@ -14,8 +14,8 @@ const PRODUCTS = [
     price: 1440 + '€',
     stars: 4,
     reviews: 65,
-    seller: 'PcComponentes',
-    image: './assets/assets-proyectp-2/imagenes/APPLE/pc2',
+    seller: 'Vendido por PcComponentes',
+    image: './assets/assets-proyectp-2/imagenes/APPLE/pc2.webp',
   },
   {
     name: 'Apple Macbook Pro Apple M3 8 Núcleos/8GB/512GB SSD/GPU 10 Núcleos/14" Gris Espacial',
@@ -23,8 +23,8 @@ const PRODUCTS = [
     price: 1928 + '€',
     stars: 5,
     reviews: 1,
-    seller: 'PcComponentes',
-    image: './assets/assets-proyectp-2/imagenes/APPLE/pc3',
+    seller: 'Vendido por PcComponentes',
+    image: './assets/assets-proyectp-2/imagenes/APPLE/pc3.webp',
   },
   {
     name: 'Apple MacBook Air Apple M1/8GB/256GB SSD/GPU Hepta Core/13.3 Plata',
@@ -32,8 +32,8 @@ const PRODUCTS = [
     price: 959 + '€',
     stars: 4,
     reviews: 718,
-    seller: 'PcComponentes',
-    image: './assets/assets-proyectp-2/imagenes/APPLE/pc4',
+    seller: 'Vendido por PcComponentes',
+    image: './assets/assets-proyectp-2/imagenes/APPLE/pc4.webp',
   },
   {
     name: 'ASUS TUF Gaming A15 2023 FA507NU-LP045 AMD Ryzen 7 7735HS/16GB/512GB SSD/RTX 4050/15.6',
@@ -41,8 +41,8 @@ const PRODUCTS = [
     price: 999 + '€',
     stars: 3,
     reviews: 17,
-    seller: 'PcComponentes',
-    image: './assets/assets-proyectp-2/imagenes/ASUS/pc5',
+    seller: 'Vendido por PcComponentes',
+    image: './assets/assets-proyectp-2/imagenes/ASUS/pc5.webp',
   },
   {
     name: 'ASUS Vivobook Go E1504FA-NJ642W AMD Ryzen 5 7520U/8GB/512GB SSD/15.6',
@@ -50,8 +50,8 @@ const PRODUCTS = [
     price: 469 + '€',
     stars: 2,
     reviews: 33,
-    seller: 'Mackfan',
-    image: './assets/assets-proyectp-2/imagenes/ASUS/pc6',
+    seller: 'Vendido por Mackfan',
+    image: './assets/assets-proyectp-2/imagenes/ASUS/pc6.webp',
   },
   {
     name: 'HP Victus 15-fa0053ns Intel Core i5-12450H/16GB/512GB SSD/RTX 3050/15.6',
@@ -59,8 +59,8 @@ const PRODUCTS = [
     price: 729 + '€',
     stars: 5,
     reviews: 23,
-    seller: 'PcComponentes',
-    image: './assets/assets-proyectp-2/imagenes/HP/pc7',
+    seller: 'Vendido por PcComponentes',
+    image: './assets/assets-proyectp-2/imagenes/HP/pc14.webp',
   },
   {
     name: 'HP ZBook Studio G9 Intel Core i7-12700H/32GB/512GB SSD/RTX 3060/16',
@@ -68,8 +68,8 @@ const PRODUCTS = [
     price: 2820 + '€',
     stars: 4,
     reviews: 40,
-    seller: 'Mackfan',
-    image: './assets/assets-proyectp-2/imagenes/HP/pc8',
+    seller: 'Vendido por Mackfan',
+    image: './assets/assets-proyectp-2/imagenes/HP/pc8.webp',
   },
   {
     name: 'HP 255 G9 AMD Ryzen 5 5625U/16GB/512 GB SSD/15.6',
@@ -77,8 +77,8 @@ const PRODUCTS = [
     price: 499 + '€',
     stars: 3,
     reviews: 13,
-    seller: 'Mackfan',
-    image: './assets/assets-proyectp-2/imagenes/HP/pc9',
+    seller: 'Vendido por Mackfan',
+    image: './assets/assets-proyectp-2/imagenes/HP/pc9.webp',
   },
   {
     name: 'Lenovo IdeaPad Slim 3 15IAH8 Intel Core i5-12450H/8GB/512GB SSD/15.6',
@@ -86,8 +86,8 @@ const PRODUCTS = [
     price: 399 + '€',
     stars: 3,
     reviews: 38,
-    seller: 'Mackfan',
-    image: './assets/assets-proyectp-2/imagenes/LENOVO/pc10',
+    seller: 'Vendido por Mackfan',
+    image: './assets/assets-proyectp-2/imagenes/LENOVO/pc10.webp',
   },
   {
     name: 'Lenovo IdeaPad Flex 5 14IAU7 Intel Core i7-1255U/16GB/512GB SSD/14" Táctil',
@@ -95,8 +95,8 @@ const PRODUCTS = [
     price: 929 + '€',
     stars: 2,
     reviews: 110,
-    seller: 'Mackfan',
-    image: './assets/assets-proyectp-2/imagenes/LENOVO/pc11',
+    seller: 'Vendido por Mackfan',
+    image: './assets/assets-proyectp-2/imagenes/LENOVO/pc11.webp',
   },
   {
     name: 'Lenovo ThinkPad L15 Gen 4 Intel Core i7-1355U/16GB/512GB SSD/15.6',
@@ -104,10 +104,14 @@ const PRODUCTS = [
     price: 1526 + '€',
     stars: 3,
     reviews: 68,
-    seller: 'PcComponentes',
+    seller: 'Vendido por PcComponentes',
     image: './assets/assets-proyectp-2/imagenes/LENOVO/pc12.webp',
   },
 ]
+
+//! NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR ---------------
+
+const sectionNavBar = document.querySelector('#navBar')
 
 //CREAR ELEMENTOS:
 
@@ -146,8 +150,9 @@ indexContent2.appendChild(index2)
 divIndex.appendChild(indexContent3)
 indexContent3.appendChild(index3Logo)
 indexContent3.appendChild(index3)
+sectionNavBar.appendChild(divNavBar)
 
-// ADD
+// VALORES
 
 index1.textContent = 'Compromisos'
 index2.textContent = 'Mi cuenta'
@@ -164,3 +169,53 @@ divIndex.classList.add('divIndex')
 index1Logo.src = '/assets/assets-proyectp-2/nav-bar/compromisos.png'
 index2Logo.src = '/assets/assets-proyectp-2/nav-bar/usuario.png'
 index3Logo.src = '/assets/assets-proyectp-2/nav-bar/cesta.png'
+
+//! NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR NAVBAR ---------------
+
+//!-----------------------------------------------------------------
+
+//! PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS-----------
+
+const productlist = document.createElement('article')
+
+const printProducts = (products) => {
+  const productsSection = document.querySelector('#products')
+
+  for (const product of products) {
+    //CREAR ELEMENTOS:
+    const divProduct = document.createElement('div')
+    const productImg = document.createElement('img')
+    const productName = document.createElement('span')
+    const productBrand = document.createElement('h3')
+    const productPrice = document.createElement('p')
+    const productComment = document.createElement('div')
+    const pStars = document.createElement('div')
+    const pComment = document.createElement('p')
+    const productSeller = document.createElement('h4')
+
+    //CLASES
+
+    productImg.src = product.image
+    productName.textContent = product.name
+    productBrand.textContent = product.brand
+    productPrice.textContent = product.price
+    productSeller.textContent = product.seller
+
+    divProduct.classList.add('divProduct')
+
+    // AÑADIR ELEMENTOS AL HTML
+    divProduct.appendChild(productImg)
+    divProduct.appendChild(productName)
+    divProduct.appendChild(productBrand)
+    divProduct.appendChild(productPrice)
+    divProduct.appendChild(productComment)
+    productComment.appendChild(pStars)
+    productComment.appendChild(pComment)
+    divProduct.appendChild(productSeller)
+    productlist.appendChild(divProduct)
+    productsSection.appendChild(productlist)
+
+    // VALORES
+  }
+}
+printProducts(PRODUCTS)
