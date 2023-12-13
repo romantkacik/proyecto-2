@@ -176,13 +176,16 @@ index3Logo.src = '/assets/assets-proyectp-2/nav-bar/cesta.png'
 
 //! PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS PRODUCTS-----------
 
+const productsSection = document.querySelector('#products')
 const productlist = document.createElement('article')
+productlist.className = 'productlist'
+productsSection.appendChild(productlist)
 
 const printProducts = (products) => {
-  const productsSection = document.querySelector('#products')
-
+  productlist.innerHTML = ''
   for (const product of products) {
     //CREAR ELEMENTOS:
+
     const divProduct = document.createElement('div')
     divProduct.classList.add('divProduct')
     const productImg = document.createElement('img')
@@ -212,7 +215,6 @@ const printProducts = (products) => {
     productComment.appendChild(pComment)
     divProduct.appendChild(productSeller)
     productlist.appendChild(divProduct)
-    productsSection.appendChild(productlist)
 
     // VALORES
 
@@ -225,5 +227,53 @@ const printProducts = (products) => {
   }
 }
 printProducts(PRODUCTS)
+//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*/
 
-const filtrosSection = document.querySelector('#filter')
+const productFilter = document.createElement('article')
+productFilter.classList.add('productFilter')
+productsSection.appendChild(productFilter)
+
+const filtro = document.createElement('label')
+filtro.classList.add('filtro')
+const selectLabel = document.createElement('select')
+selectLabel.id = 'brandFilter' // Usa id en lugar de class
+const option1 = document.createElement('option')
+const option2 = document.createElement('option')
+const option3 = document.createElement('option')
+const option4 = document.createElement('option')
+const option5 = document.createElement('option')
+
+selectLabel.appendChild(option1)
+selectLabel.appendChild(option2)
+selectLabel.appendChild(option3)
+selectLabel.appendChild(option4)
+selectLabel.appendChild(option5)
+filtro.appendChild(selectLabel)
+productFilter.appendChild(filtro)
+
+option1.textContent = 'Mostrar todos'
+option1.value = 'all'
+option2.textContent = 'Apple'
+option2.value = 'Apple'
+option3.textContent = 'Asus'
+option3.value = 'Asus'
+option4.textContent = 'HP'
+option4.value = 'HP'
+option5.textContent = 'Lenovo'
+option5.value = 'Lenovo'
+
+const brandFilter = document.getElementById('brandFilter')
+brandFilter.addEventListener('change', handleBrandFilter)
+
+function handleBrandFilter() {
+  const selectedBrand = brandFilter.value
+  const filteredProducts = filterProductsByBrand(PRODUCTS, selectedBrand)
+  printProducts(filteredProducts)
+}
+
+function filterProductsByBrand(products, brand) {
+  if (brand === 'all') {
+    return products // Mostrar todos los productos si la opción es "Mostrar Todos"
+  }
+  return products.filter((product) => product.brand === brand)
+}
