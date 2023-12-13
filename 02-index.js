@@ -184,24 +184,23 @@ const printProducts = (products) => {
   for (const product of products) {
     //CREAR ELEMENTOS:
     const divProduct = document.createElement('div')
+    divProduct.classList.add('divProduct')
     const productImg = document.createElement('img')
     const productName = document.createElement('span')
     const productBrand = document.createElement('h3')
     const productPrice = document.createElement('p')
     const productComment = document.createElement('div')
-    const pStars = document.createElement('div')
-    const pComment = document.createElement('p')
+    productComment.classList = 'productComment'
+    const allStars = document.createElement('div')
+    allStars.className = 'allStars'
+    for (let i = 1; i <= product.stars; i++) {
+      const star = document.createElement('div')
+      star.className = 'star'
+      allStars.appendChild(star)
+    }
+
+    const pComment = document.createElement('span')
     const productSeller = document.createElement('h4')
-
-    //CLASES
-
-    productImg.src = product.image
-    productName.textContent = product.name
-    productBrand.textContent = product.brand
-    productPrice.textContent = product.price
-    productSeller.textContent = product.seller
-
-    divProduct.classList.add('divProduct')
 
     // AÑADIR ELEMENTOS AL HTML
     divProduct.appendChild(productImg)
@@ -209,13 +208,22 @@ const printProducts = (products) => {
     divProduct.appendChild(productBrand)
     divProduct.appendChild(productPrice)
     divProduct.appendChild(productComment)
-    productComment.appendChild(pStars)
+    productComment.appendChild(allStars)
     productComment.appendChild(pComment)
     divProduct.appendChild(productSeller)
     productlist.appendChild(divProduct)
     productsSection.appendChild(productlist)
 
     // VALORES
+
+    productImg.src = product.image
+    productName.textContent = product.name
+    productBrand.textContent = product.brand
+    productPrice.textContent = product.price
+    productSeller.textContent = product.seller
+    pComment.textContent = `(${product.reviews})`
   }
 }
 printProducts(PRODUCTS)
+
+const filtrosSection = document.querySelector('#filter')
