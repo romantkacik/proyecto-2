@@ -110,8 +110,8 @@
 .divIndex > div > img {
   width: 20px;
 }
-.divIndex > div > span {
-  font-size: 20px;
+.divIndex > div > a {
+  font-size: 18px;
   font-weight: 300;
   color: var(--rtc-color-text--);
 }
@@ -130,7 +130,7 @@
   flex-wrap: wrap;
   width: 85%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-bottom: 5%;
   border-bottom: var(--rtc-border--);
   border-left: var(--rtc-border--);
@@ -222,4 +222,16 @@ h4 {
   gap: var(--rtc-gap-s);
   border-radius: 10px;
   border: var(--rtc-border--);
+}
+
+/* RESPONSIVE /* RESPONSIVE /* RESPONSIVE /* RESPONSIVE /* RESPONSIVE /* RESPONSIVE
+/* RESPONSIVE /* RESPONSIVE /* RESPONSIVE /* RESPONSIVE /* RESPONSIVE /* RESPONSIVE */
+
+@media screen and (min-width: 1040px) and (max-width: 1175px) {
+  .serch {
+    display: none;
+  }
+  .navBar {
+    padding: 15px 15px;
+  }
 }

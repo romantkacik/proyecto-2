@@ -124,13 +124,13 @@ const lupNav = document.createElement('img')
 //NAVBAR INDEX
 const divIndex = document.createElement('div')
 const indexContent1 = document.createElement('div')
-const index1 = document.createElement('span')
+const index1 = document.createElement('a')
 const index1Logo = document.createElement('img')
 const indexContent2 = document.createElement('div')
-const index2 = document.createElement('span')
+const index2 = document.createElement('a')
 const index2Logo = document.createElement('img')
 const indexContent3 = document.createElement('div')
-const index3 = document.createElement('span')
+const index3 = document.createElement('a')
 const index3Logo = document.createElement('img')
 
 // AÑADIR ELEMENTOS AL HTML
@@ -155,7 +155,9 @@ sectionNavBar.appendChild(divNavBar)
 // VALORES
 
 index1.textContent = 'Compromisos'
+index1.href = 'https://www.pccomponentes.com/compromisos'
 index2.textContent = 'Mi cuenta'
+index2.href = 'https://www.pccomponentes.com/login'
 index3.textContent = 'Mi cesta'
 
 divNavBar.classList.add('navBar')
