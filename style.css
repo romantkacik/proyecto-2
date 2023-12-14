@@ -204,4 +204,22 @@ h4 {
   width: 20%;
   display: flex;
   flex-direction: initial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: var(--rtc-padding-m);
+  gap: var(--rtc-gap-l);
+}
+
+.filtro1,
+.filtro2 {
+  width: 90%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--rtc-gap-s);
+  border-radius: 10px;
+  border: var(--rtc-border--);
 }

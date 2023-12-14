@@ -227,16 +227,23 @@ const printProducts = (products) => {
   }
 }
 printProducts(PRODUCTS)
+
 //*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*//*FILTRO*/
+
+// filtro de orden por Marcas
+// filtro de orden por Marcas
+// filtro de orden por Marcas
+// filtro de orden por Marcas
 
 const productFilter = document.createElement('article')
 productFilter.classList.add('productFilter')
 productsSection.appendChild(productFilter)
 
 const filtro = document.createElement('label')
-filtro.classList.add('filtro')
+filtro.classList.add('filtro1')
 const selectLabel = document.createElement('select')
-selectLabel.id = 'brandFilter' // Usa id en lugar de class
+selectLabel.id = 'brandFilter'
+filtro.innerText = 'Filtrar por marca :'
 const option1 = document.createElement('option')
 const option2 = document.createElement('option')
 const option3 = document.createElement('option')
@@ -273,7 +280,47 @@ function handleBrandFilter() {
 
 function filterProductsByBrand(products, brand) {
   if (brand === 'all') {
-    return products // Mostrar todos los productos si la opción es "Mostrar Todos"
+    return products
   }
   return products.filter((product) => product.brand === brand)
+}
+
+// filtro de orden ASC y DESC al DOM
+// filtro de orden ASC y DESC al DOM
+// filtro de orden ASC y DESC al DOM
+
+const labelContent = document.createElement('label')
+labelContent.classList.add('filtro2')
+labelContent.innerText = 'Filtrar por precio :'
+const orderLabel = document.createElement('select')
+orderLabel.id = 'orderFilter'
+const orderOption1 = document.createElement('option')
+const orderOption2 = document.createElement('option')
+
+orderLabel.appendChild(orderOption1)
+orderLabel.appendChild(orderOption2)
+
+orderOption1.textContent = 'Precio de menor a mayor'
+orderOption1.value = 'asc'
+orderOption2.textContent = 'Precio de mayor a menor'
+orderOption2.value = 'desc'
+
+productFilter.classList.add('productFilter')
+productsSection.appendChild(productFilter)
+labelContent.appendChild(orderLabel)
+productFilter.appendChild(labelContent)
+
+const orderFilter = document.getElementById('orderFilter')
+orderFilter.addEventListener('change', handleOrderFilter)
+
+function handleOrderFilter() {
+  const selectedOrder = orderFilter.value
+  const sortedProducts = PRODUCTS.slice().sort((a, b) => {
+    const priceA = parseFloat(a.price)
+    const priceB = parseFloat(b.price)
+
+    return selectedOrder === 'asc' ? priceA - priceB : priceB - priceA
+  })
+
+  printProducts(sortedProducts)
 }
