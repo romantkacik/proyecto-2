@@ -162,7 +162,7 @@ index3.textContent = 'Mi cesta'
 
 divNavBar.classList.add('navBar')
 divNavBar > logo.classList.add('logo')
-logo.href = '/assets/assets-proyectp-2/nav-bar/logo-pccomponentes.svg'
+logo.src = '/assets/assets-proyectp-2/nav-bar/logo-pccomponentes.svg'
 divNavBar > serchContent.classList.add('serch')
 inputNav.value = 'Buscar'
 lupNav.src = '/assets/assets-proyectp-2/nav-bar/busqueda.png'
