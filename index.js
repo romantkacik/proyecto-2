@@ -155,7 +155,9 @@ sectionNavBar.appendChild(divNavBar)
 // VALORES
 
 index1.textContent = 'Compromisos'
+index1.src = 'https://www.pccomponentes.com/compromisos'
 index2.textContent = 'Mi cuenta'
+index2.src = 'https://www.pccomponentes.com/login'
 index3.textContent = 'Mi cesta'
 
 divNavBar.classList.add('navBar')
