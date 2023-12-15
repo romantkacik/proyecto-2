@@ -155,14 +155,14 @@ sectionNavBar.appendChild(divNavBar)
 // VALORES
 
 index1.textContent = 'Compromisos'
-index1.src = 'https://www.pccomponentes.com/compromisos'
+index1.href = 'https://www.pccomponentes.com/compromisos'
 index2.textContent = 'Mi cuenta'
 index2.src = 'https://www.pccomponentes.com/login'
 index3.textContent = 'Mi cesta'
 
 divNavBar.classList.add('navBar')
 divNavBar > logo.classList.add('logo')
-logo.src = '/assets/assets-proyectp-2/nav-bar/logo-pccomponentes.svg'
+logo.href = '/assets/assets-proyectp-2/nav-bar/logo-pccomponentes.svg'
 divNavBar > serchContent.classList.add('serch')
 inputNav.value = 'Buscar'
 lupNav.src = '/assets/assets-proyectp-2/nav-bar/busqueda.png'
