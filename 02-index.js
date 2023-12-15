@@ -155,9 +155,9 @@ sectionNavBar.appendChild(divNavBar)
 // VALORES
 
 index1.textContent = 'Compromisos'
-index1.href = 'https://www.pccomponentes.com/compromisos'
+index1.href = '#'
 index2.textContent = 'Mi cuenta'
-index2.href = 'https://www.pccomponentes.com/login'
+index2.href = '#'
 index3.textContent = 'Mi cesta'
 
 divNavBar.classList.add('navBar')
