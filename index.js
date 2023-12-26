@@ -245,7 +245,7 @@ const filtro = document.createElement('label')
 filtro.classList.add('filtro1')
 const selectLabel = document.createElement('select')
 selectLabel.id = 'brandFilter'
-filtro.innerText = 'Filtrar por marca :'
+filtro.innerText = 'Marca :'
 const option1 = document.createElement('option')
 const option2 = document.createElement('option')
 const option3 = document.createElement('option')
@@ -293,7 +293,7 @@ function filterProductsByBrand(products, brand) {
 
 const labelContent = document.createElement('label')
 labelContent.classList.add('filtro2')
-labelContent.innerText = 'Filtrar por precio :'
+labelContent.innerText = 'Precio :'
 const orderLabel = document.createElement('select')
 orderLabel.id = 'orderFilter'
 const orderOption1 = document.createElement('option')
@@ -325,4 +325,70 @@ function handleOrderFilter() {
   })
 
   printProducts(sortedProducts)
+}
+
+// filtro por precio
+
+const priceFilterSection = document.createElement('article')
+priceFilterSection.classList.add('filtro3')
+productsSection.appendChild(priceFilterSection)
+
+const priceLabel = document.createElement('label')
+priceLabel.classList.add('labelfilter3')
+priceLabel.innerText = 'Precio máximo :'
+const maxPriceInput = document.createElement('input')
+maxPriceInput.type = 'number'
+maxPriceInput.id = 'maxPriceInput'
+maxPriceInput.placeholder = 'Precio máximo'
+const applyPriceFilterBtn = document.createElement('button')
+applyPriceFilterBtn.id = 'applyPriceFilter'
+applyPriceFilterBtn.textContent = 'Aplicar filtro'
+
+priceFilterSection.appendChild(priceLabel)
+priceFilterSection.appendChild(maxPriceInput)
+priceFilterSection.appendChild(applyPriceFilterBtn)
+productFilter.appendChild(priceFilterSection)
+
+applyPriceFilterBtn.addEventListener('click', handlePriceFilter)
+
+function handlePriceFilter() {
+  const maxPrice = parseFloat(maxPriceInput.value)
+  if (!isNaN(maxPrice)) {
+    const filteredProducts = filterProductsByPrice(PRODUCTS, maxPrice)
+    printProducts(filteredProducts)
+  } else {
+    alert('Por favor, ingresa un valor numérico para el precio máximo.')
+  }
+}
+
+function filterProductsByPrice(products, maxPrice) {
+  return products.filter((product) => {
+    const productPrice = parseFloat(product.price)
+    return !isNaN(productPrice) && productPrice <= maxPrice
+  })
+}
+
+// Limpiar filtros
+
+// Añadir el nuevo botón de reset
+const resetFiltersSection = document.createElement('article')
+resetFiltersSection.id = 'resetFilters'
+productFilter.appendChild(resetFiltersSection)
+
+const resetFiltersBtn = document.createElement('button')
+resetFiltersBtn.id = 'resetFiltersBtn'
+resetFiltersBtn.textContent = 'Resetear filtros'
+resetFiltersSection.appendChild(resetFiltersBtn)
+
+// Event listener para el botón de reset
+resetFiltersBtn.addEventListener('click', resetFilters)
+
+function resetFilters() {
+  // Limpiar valores de los filtros
+  maxPriceInput.value = ''
+  brandFilter.value = 'all'
+  orderFilter.value = 'asc'
+
+  // Mostrar todos los productos
+  printProducts(PRODUCTS)
 }
